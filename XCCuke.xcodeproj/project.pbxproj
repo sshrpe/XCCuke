@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F00EA3DE1A90B480005A7A39 /* XCQTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = F00EA3DD1A90B480005A7A39 /* XCQTestSuite.m */; };
+		F00EA3E01A90B625005A7A39 /* XCQTestSuite.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F00EA3DF1A90B4A2005A7A39 /* XCQTestSuite.h */; };
+		F04A449E1A90DFA700A2A36F /* XCQScenarioTestSuiteDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteDelegate.h */; };
+		F04A449F1A90DFA700A2A36F /* XCQFeature.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08C1FEF1A8FFC2100DD5F76 /* XCQFeature.h */; };
+		F04A44A01A90DFA700A2A36F /* XCQScenario.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08C1FF11A8FFC2100DD5F76 /* XCQScenario.h */; };
+		F04A44A11A90DFA700A2A36F /* XCQStep.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08C1FF31A8FFC2100DD5F76 /* XCQStep.h */; };
+		F04A44A21A90DFA700A2A36F /* XCQScenarioTestSuite.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08C1FF51A8FFC2100DD5F76 /* XCQScenarioTestSuite.h */; };
+		F04A44A31A90DFA700A2A36F /* XCTestCase+XCQStepTestCase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08C200B1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.h */; };
+		F04A44A41A90DFA700A2A36F /* XCTestSuite+XCQFeatureTestSuite.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08C20001A8FFE6200DD5F76 /* XCTestSuite+XCQFeatureTestSuite.h */; };
+		F08C1FC61A8FFBE900DD5F76 /* XCCuke.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08C1FC51A8FFBE900DD5F76 /* XCCuke.h */; };
+		F08C1FCE1A8FFBE900DD5F76 /* libXCCuke.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F08C1FC21A8FFBE900DD5F76 /* libXCCuke.a */; };
+		F08C1FEC1A8FFC1100DD5F76 /* XCQFeatureParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C1FEB1A8FFC1100DD5F76 /* XCQFeatureParserTests.m */; };
+		F08C1FF71A8FFC2100DD5F76 /* XCQFeatureParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C1FEE1A8FFC2100DD5F76 /* XCQFeatureParser.m */; };
+		F08C1FF81A8FFC2100DD5F76 /* XCQFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C1FF01A8FFC2100DD5F76 /* XCQFeature.m */; };
+		F08C1FF91A8FFC2100DD5F76 /* XCQScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C1FF21A8FFC2100DD5F76 /* XCQScenario.m */; };
+		F08C1FFA1A8FFC2100DD5F76 /* XCQStep.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C1FF41A8FFC2100DD5F76 /* XCQStep.m */; };
+		F08C1FFB1A8FFC2100DD5F76 /* XCQScenarioTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C1FF61A8FFC2100DD5F76 /* XCQScenarioTestSuite.m */; };
+		F08C1FFE1A8FFD1A00DD5F76 /* Feature.feature in Resources */ = {isa = PBXBuildFile; fileRef = F08C1FFC1A8FFD1A00DD5F76 /* Feature.feature */; };
+		F08C1FFF1A8FFD1A00DD5F76 /* Second.feature in Resources */ = {isa = PBXBuildFile; fileRef = F08C1FFD1A8FFD1A00DD5F76 /* Second.feature */; };
+		F08C20021A8FFE6200DD5F76 /* XCTestSuite+XCQFeatureTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C20011A8FFE6200DD5F76 /* XCTestSuite+XCQFeatureTestSuite.m */; };
+		F08C200A1A90047200DD5F76 /* TestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C20091A90047200DD5F76 /* TestRunner.m */; };
+		F08C200D1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C200C1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.m */; };
+		F08C200E1A900C7800DD5F76 /* XCQStepDefinitionNotFoundCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C20041A8FFEBC00DD5F76 /* XCQStepDefinitionNotFoundCase.m */; };
+		F0B371D21A90F12000A0CB20 /* ExampleSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B371D11A90F12000A0CB20 /* ExampleSuite.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F08C1FCF1A8FFBE900DD5F76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F08C1FBA1A8FFBE900DD5F76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F08C1FC11A8FFBE900DD5F76;
+			remoteInfo = ObjectiveCuke;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F08C1FC01A8FFBE900DD5F76 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				F04A449E1A90DFA700A2A36F /* XCQScenarioTestSuiteDelegate.h in CopyFiles */,
+				F04A449F1A90DFA700A2A36F /* XCQFeature.h in CopyFiles */,
+				F04A44A01A90DFA700A2A36F /* XCQScenario.h in CopyFiles */,
+				F04A44A11A90DFA700A2A36F /* XCQStep.h in CopyFiles */,
+				F04A44A21A90DFA700A2A36F /* XCQScenarioTestSuite.h in CopyFiles */,
+				F04A44A31A90DFA700A2A36F /* XCTestCase+XCQStepTestCase.h in CopyFiles */,
+				F04A44A41A90DFA700A2A36F /* XCTestSuite+XCQFeatureTestSuite.h in CopyFiles */,
+				F00EA3E01A90B625005A7A39 /* XCQTestSuite.h in CopyFiles */,
+				F08C1FC61A8FFBE900DD5F76 /* XCCuke.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F00EA3DD1A90B480005A7A39 /* XCQTestSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQTestSuite.m; sourceTree = "<group>"; };
+		F00EA3DF1A90B4A2005A7A39 /* XCQTestSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQTestSuite.h; sourceTree = "<group>"; };
+		F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQScenarioTestSuiteDelegate.h; sourceTree = "<group>"; };
+		F08C1FC21A8FFBE900DD5F76 /* libXCCuke.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXCCuke.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08C1FC51A8FFBE900DD5F76 /* XCCuke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCuke.h; sourceTree = "<group>"; };
+		F08C1FCD1A8FFBE900DD5F76 /* XCCukeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCCukeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08C1FD31A8FFBE900DD5F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F08C1FEB1A8FFC1100DD5F76 /* XCQFeatureParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQFeatureParserTests.m; sourceTree = "<group>"; };
+		F08C1FED1A8FFC2100DD5F76 /* XCQFeatureParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQFeatureParser.h; sourceTree = "<group>"; };
+		F08C1FEE1A8FFC2100DD5F76 /* XCQFeatureParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQFeatureParser.m; sourceTree = "<group>"; };
+		F08C1FEF1A8FFC2100DD5F76 /* XCQFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQFeature.h; sourceTree = "<group>"; };
+		F08C1FF01A8FFC2100DD5F76 /* XCQFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQFeature.m; sourceTree = "<group>"; };
+		F08C1FF11A8FFC2100DD5F76 /* XCQScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQScenario.h; sourceTree = "<group>"; };
+		F08C1FF21A8FFC2100DD5F76 /* XCQScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQScenario.m; sourceTree = "<group>"; };
+		F08C1FF31A8FFC2100DD5F76 /* XCQStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQStep.h; sourceTree = "<group>"; };
+		F08C1FF41A8FFC2100DD5F76 /* XCQStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQStep.m; sourceTree = "<group>"; };
+		F08C1FF51A8FFC2100DD5F76 /* XCQScenarioTestSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQScenarioTestSuite.h; sourceTree = "<group>"; };
+		F08C1FF61A8FFC2100DD5F76 /* XCQScenarioTestSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQScenarioTestSuite.m; sourceTree = "<group>"; };
+		F08C1FFC1A8FFD1A00DD5F76 /* Feature.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Feature.feature; sourceTree = "<group>"; };
+		F08C1FFD1A8FFD1A00DD5F76 /* Second.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Second.feature; sourceTree = "<group>"; };
+		F08C20001A8FFE6200DD5F76 /* XCTestSuite+XCQFeatureTestSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestSuite+XCQFeatureTestSuite.h"; sourceTree = "<group>"; };
+		F08C20011A8FFE6200DD5F76 /* XCTestSuite+XCQFeatureTestSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestSuite+XCQFeatureTestSuite.m"; sourceTree = "<group>"; };
+		F08C20031A8FFEBC00DD5F76 /* XCQStepDefinitionNotFoundCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQStepDefinitionNotFoundCase.h; sourceTree = "<group>"; };
+		F08C20041A8FFEBC00DD5F76 /* XCQStepDefinitionNotFoundCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQStepDefinitionNotFoundCase.m; sourceTree = "<group>"; };
+		F08C20091A90047200DD5F76 /* TestRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRunner.m; sourceTree = "<group>"; };
+		F08C200B1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+XCQStepTestCase.h"; sourceTree = "<group>"; };
+		F08C200C1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+XCQStepTestCase.m"; sourceTree = "<group>"; };
+		F0B371D11A90F12000A0CB20 /* ExampleSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleSuite.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F08C1FBF1A8FFBE900DD5F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08C1FCA1A8FFBE900DD5F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08C1FCE1A8FFBE900DD5F76 /* libXCCuke.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F08C1FB91A8FFBE900DD5F76 = {
+			isa = PBXGroup;
+			children = (
+				F08C1FC41A8FFBE900DD5F76 /* XCCuke */,
+				F08C1FD11A8FFBE900DD5F76 /* XCCukeTests */,
+				F08C1FC31A8FFBE900DD5F76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F08C1FC31A8FFBE900DD5F76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F08C1FC21A8FFBE900DD5F76 /* libXCCuke.a */,
+				F08C1FCD1A8FFBE900DD5F76 /* XCCukeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F08C1FC41A8FFBE900DD5F76 /* XCCuke */ = {
+			isa = PBXGroup;
+			children = (
+				F08C1FC51A8FFBE900DD5F76 /* XCCuke.h */,
+				F00EA3DF1A90B4A2005A7A39 /* XCQTestSuite.h */,
+				F00EA3DD1A90B480005A7A39 /* XCQTestSuite.m */,
+				F08C1FED1A8FFC2100DD5F76 /* XCQFeatureParser.h */,
+				F08C1FEE1A8FFC2100DD5F76 /* XCQFeatureParser.m */,
+				F08C1FEF1A8FFC2100DD5F76 /* XCQFeature.h */,
+				F08C1FF01A8FFC2100DD5F76 /* XCQFeature.m */,
+				F08C1FF11A8FFC2100DD5F76 /* XCQScenario.h */,
+				F08C1FF21A8FFC2100DD5F76 /* XCQScenario.m */,
+				F08C1FF31A8FFC2100DD5F76 /* XCQStep.h */,
+				F08C1FF41A8FFC2100DD5F76 /* XCQStep.m */,
+				F08C20031A8FFEBC00DD5F76 /* XCQStepDefinitionNotFoundCase.h */,
+				F08C20041A8FFEBC00DD5F76 /* XCQStepDefinitionNotFoundCase.m */,
+				F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteDelegate.h */,
+				F08C1FF51A8FFC2100DD5F76 /* XCQScenarioTestSuite.h */,
+				F08C1FF61A8FFC2100DD5F76 /* XCQScenarioTestSuite.m */,
+				F08C200B1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.h */,
+				F08C200C1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.m */,
+				F08C20001A8FFE6200DD5F76 /* XCTestSuite+XCQFeatureTestSuite.h */,
+				F08C20011A8FFE6200DD5F76 /* XCTestSuite+XCQFeatureTestSuite.m */,
+			);
+			path = XCCuke;
+			sourceTree = "<group>";
+		};
+		F08C1FD11A8FFBE900DD5F76 /* XCCukeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F08C1FFC1A8FFD1A00DD5F76 /* Feature.feature */,
+				F08C1FFD1A8FFD1A00DD5F76 /* Second.feature */,
+				F08C1FEB1A8FFC1100DD5F76 /* XCQFeatureParserTests.m */,
+				F08C20091A90047200DD5F76 /* TestRunner.m */,
+				F0B371D11A90F12000A0CB20 /* ExampleSuite.m */,
+				F08C1FD21A8FFBE900DD5F76 /* Supporting Files */,
+			);
+			path = XCCukeTests;
+			sourceTree = "<group>";
+		};
+		F08C1FD21A8FFBE900DD5F76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F08C1FD31A8FFBE900DD5F76 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F08C1FC11A8FFBE900DD5F76 /* XCCuke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F08C1FD61A8FFBE900DD5F76 /* Build configuration list for PBXNativeTarget "XCCuke" */;
+			buildPhases = (
+				F08C1FBE1A8FFBE900DD5F76 /* Sources */,
+				F08C1FBF1A8FFBE900DD5F76 /* Frameworks */,
+				F08C1FC01A8FFBE900DD5F76 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCCuke;
+			productName = ObjectiveCuke;
+			productReference = F08C1FC21A8FFBE900DD5F76 /* libXCCuke.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F08C1FCC1A8FFBE900DD5F76 /* XCCukeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F08C1FD91A8FFBE900DD5F76 /* Build configuration list for PBXNativeTarget "XCCukeTests" */;
+			buildPhases = (
+				F08C1FC91A8FFBE900DD5F76 /* Sources */,
+				F08C1FCA1A8FFBE900DD5F76 /* Frameworks */,
+				F08C1FCB1A8FFBE900DD5F76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F08C1FD01A8FFBE900DD5F76 /* PBXTargetDependency */,
+			);
+			name = XCCukeTests;
+			productName = ObjectiveCukeTests;
+			productReference = F08C1FCD1A8FFBE900DD5F76 /* XCCukeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F08C1FBA1A8FFBE900DD5F76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = BBC;
+				TargetAttributes = {
+					F08C1FC11A8FFBE900DD5F76 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					F08C1FCC1A8FFBE900DD5F76 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = F08C1FBD1A8FFBE900DD5F76 /* Build configuration list for PBXProject "XCCuke" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F08C1FB91A8FFBE900DD5F76;
+			productRefGroup = F08C1FC31A8FFBE900DD5F76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F08C1FC11A8FFBE900DD5F76 /* XCCuke */,
+				F08C1FCC1A8FFBE900DD5F76 /* XCCukeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F08C1FCB1A8FFBE900DD5F76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08C1FFF1A8FFD1A00DD5F76 /* Second.feature in Resources */,
+				F08C1FFE1A8FFD1A00DD5F76 /* Feature.feature in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F08C1FBE1A8FFBE900DD5F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08C200E1A900C7800DD5F76 /* XCQStepDefinitionNotFoundCase.m in Sources */,
+				F08C1FF91A8FFC2100DD5F76 /* XCQScenario.m in Sources */,
+				F00EA3DE1A90B480005A7A39 /* XCQTestSuite.m in Sources */,
+				F08C20021A8FFE6200DD5F76 /* XCTestSuite+XCQFeatureTestSuite.m in Sources */,
+				F08C1FF71A8FFC2100DD5F76 /* XCQFeatureParser.m in Sources */,
+				F08C200D1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.m in Sources */,
+				F08C1FFA1A8FFC2100DD5F76 /* XCQStep.m in Sources */,
+				F08C1FFB1A8FFC2100DD5F76 /* XCQScenarioTestSuite.m in Sources */,
+				F08C1FF81A8FFC2100DD5F76 /* XCQFeature.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08C1FC91A8FFBE900DD5F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08C1FEC1A8FFC1100DD5F76 /* XCQFeatureParserTests.m in Sources */,
+				F0B371D21A90F12000A0CB20 /* ExampleSuite.m in Sources */,
+				F08C200A1A90047200DD5F76 /* TestRunner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F08C1FD01A8FFBE900DD5F76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F08C1FC11A8FFBE900DD5F76 /* XCCuke */;
+			targetProxy = F08C1FCF1A8FFBE900DD5F76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F08C1FD41A8FFBE900DD5F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F08C1FD51A8FFBE900DD5F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F08C1FD71A8FFBE900DD5F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F08C1FD81A8FFBE900DD5F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F08C1FDA1A8FFBE900DD5F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XCCukeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.bbc.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F08C1FDB1A8FFBE900DD5F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = XCCukeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.bbc.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F08C1FBD1A8FFBE900DD5F76 /* Build configuration list for PBXProject "XCCuke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F08C1FD41A8FFBE900DD5F76 /* Debug */,
+				F08C1FD51A8FFBE900DD5F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F08C1FD61A8FFBE900DD5F76 /* Build configuration list for PBXNativeTarget "XCCuke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F08C1FD71A8FFBE900DD5F76 /* Debug */,
+				F08C1FD81A8FFBE900DD5F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F08C1FD91A8FFBE900DD5F76 /* Build configuration list for PBXNativeTarget "XCCukeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F08C1FDA1A8FFBE900DD5F76 /* Debug */,
+				F08C1FDB1A8FFBE900DD5F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F08C1FBA1A8FFBE900DD5F76 /* Project object */;
+}
