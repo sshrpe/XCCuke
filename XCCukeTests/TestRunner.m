@@ -10,10 +10,11 @@
 #import "XCQScenarioTestSuite.h"
 #import "XCQFeatureParser.h"
 #import "XCQFeature.h"
+#import "XCQStepDefinition.h"
 #import "XCTestSuite+XCQFeatureTestSuite.h"
 #import "XCQStepDefinitionNotFoundCase.h"
 
-@interface TestRunner : XCTestCase
+@interface TestRunner : XCQStepDefinition
 
 @end
 

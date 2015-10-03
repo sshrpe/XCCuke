@@ -35,6 +35,9 @@ If you would like Xcode to be able to highlight lines within feature files which
 you can use the XCQ_FEATURE_FILE_DIRECTORY() macro in the subclass, passing it the path (relative to the 
 current file) to the directory within your project which contains the feature files.
 
+NB: Although it is possible to create an XCQTestSuite in Swift, the convenience macros are currently only 
+available when using Objective-C. XCQStepDefinitions can be written in Objective-C or Swift.
+
 ### Pre- and Post-Scenario Hooks
 
 The XCQTestSuite can return an observer from the `+testObserver` method, which can then be used to provide 
@@ -59,8 +62,15 @@ To define a step, create a method whose name matches the text of the step defini
 For example, a step which reads "When I tap on the 'Hello' button" would be implemented in a method such as this:
 
 ```objc
+// Objective-C
 - (void)ITapOnTheHelloButton
 {
+	// Your test code goes here.
+}
+```
+```swift
+// Swift
+func ITapOnTheHelloButton() {
 	// Your test code goes here.
 }
 ```
@@ -82,13 +92,23 @@ Scenario Outline: All buttons say the right thing
 
 All of the following steps must be defined:
 
-```
+```obj-c
+// Objective-C
 - (void)ITapOnTheHelloButton;
 - (void)ITapOnTheGoodbyeButton;
 - (void)ITapOnTheToodleooButton;
 - (void)TheOutputLabelSaysHelloWorld;
 - (void)TheOutputLabelSaysGoodbyeCruelWorld;
 - (void)TheOutputLabelSaysTtfn;
+```
+```swift
+func ITapOnTheHelloButton()
+func ITapOnTheGoodbyeButton()
+func ITapOnTheToodleooButton()
+func TheOutputLabelSaysHelloWorld()
+func TheOutputLabelSaysGoodbyeCruelWorld()
+func TheOutputLabelSaysTtfn()
+
 ```
 
 If a step definition is not found, a test failure will be logged which includes the expected method signature 
@@ -101,9 +121,9 @@ run, opening the 'Logs' pane and viewing the log for the failed step.
 - Scenario Tagging Support
 - - Filter scenarios out using a tag
 - - Automatically create test suites based on tags
-- Pattern-Matching scenario names to allow data to be passed to scenarios
-- Improvements to the test runner to allow scenario state to be passed between step definitions
-
+- Pattern-Matching scenario names to allow data to be passed to scenarios.
+- Improvements to the test runner to allow scenario state to be passed between step definitions.
+- Improve Swift support for test suites.
 
 ## Known Issues
 
