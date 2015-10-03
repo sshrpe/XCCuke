@@ -1,4 +1,4 @@
-//
+
 //  XCQTestController.m
 //  XCCukeSampleApp
 //
@@ -8,6 +8,7 @@
 
 @import XCTest;
 #import <XCCuke/XCCuke.h>
+#import "LaunchAppObserver.h"
 
 @interface AllFeatures : XCQTestSuite
 
@@ -19,4 +20,10 @@ XCQ_INCLUDE_ALL_FEATURES_IN_BUNDLE()
 
 XCQ_FEATURE_FILE_DIRECTORY(@"Features");
 
++ (id<XCQScenarioTestSuiteObserver>)testObserver
+{
+    return [[LaunchAppObserver alloc] init];
+}
+
 @end
+

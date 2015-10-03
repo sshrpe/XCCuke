@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F00EA3DE1A90B480005A7A39 /* XCQTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = F00EA3DD1A90B480005A7A39 /* XCQTestSuite.m */; };
 		F00EA3E01A90B625005A7A39 /* XCQTestSuite.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F00EA3DF1A90B4A2005A7A39 /* XCQTestSuite.h */; };
-		F04A449E1A90DFA700A2A36F /* XCQScenarioTestSuiteDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteDelegate.h */; };
+		F045123F1BBF31960064CC43 /* XCQStepDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = F045123E1BBF31960064CC43 /* XCQStepDefinition.m */; settings = {ASSET_TAGS = (); }; };
+		F04512401BBF32710064CC43 /* XCQStepDefinition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F045123D1BBF31960064CC43 /* XCQStepDefinition.h */; };
+		F04A449E1A90DFA700A2A36F /* XCQScenarioTestSuiteObserver.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteObserver.h */; };
 		F04A449F1A90DFA700A2A36F /* XCQFeature.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08C1FEF1A8FFC2100DD5F76 /* XCQFeature.h */; };
 		F04A44A01A90DFA700A2A36F /* XCQScenario.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08C1FF11A8FFC2100DD5F76 /* XCQScenario.h */; };
 		F04A44A11A90DFA700A2A36F /* XCQStep.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F08C1FF31A8FFC2100DD5F76 /* XCQStep.h */; };
@@ -50,7 +52,8 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				F04A449E1A90DFA700A2A36F /* XCQScenarioTestSuiteDelegate.h in CopyFiles */,
+				F04512401BBF32710064CC43 /* XCQStepDefinition.h in CopyFiles */,
+				F04A449E1A90DFA700A2A36F /* XCQScenarioTestSuiteObserver.h in CopyFiles */,
 				F04A449F1A90DFA700A2A36F /* XCQFeature.h in CopyFiles */,
 				F04A44A01A90DFA700A2A36F /* XCQScenario.h in CopyFiles */,
 				F04A44A11A90DFA700A2A36F /* XCQStep.h in CopyFiles */,
@@ -67,7 +70,9 @@
 /* Begin PBXFileReference section */
 		F00EA3DD1A90B480005A7A39 /* XCQTestSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQTestSuite.m; sourceTree = "<group>"; };
 		F00EA3DF1A90B4A2005A7A39 /* XCQTestSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQTestSuite.h; sourceTree = "<group>"; };
-		F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQScenarioTestSuiteDelegate.h; sourceTree = "<group>"; };
+		F045123D1BBF31960064CC43 /* XCQStepDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQStepDefinition.h; sourceTree = "<group>"; };
+		F045123E1BBF31960064CC43 /* XCQStepDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQStepDefinition.m; sourceTree = "<group>"; };
+		F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQScenarioTestSuiteObserver.h; sourceTree = "<group>"; };
 		F08C1FC21A8FFBE900DD5F76 /* libXCCuke.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXCCuke.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08C1FC51A8FFBE900DD5F76 /* XCCuke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCuke.h; sourceTree = "<group>"; };
 		F08C1FCD1A8FFBE900DD5F76 /* XCCukeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCCukeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,9 +153,11 @@
 				F08C1FF41A8FFC2100DD5F76 /* XCQStep.m */,
 				F08C20031A8FFEBC00DD5F76 /* XCQStepDefinitionNotFoundCase.h */,
 				F08C20041A8FFEBC00DD5F76 /* XCQStepDefinitionNotFoundCase.m */,
-				F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteDelegate.h */,
+				F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteObserver.h */,
 				F08C1FF51A8FFC2100DD5F76 /* XCQScenarioTestSuite.h */,
 				F08C1FF61A8FFC2100DD5F76 /* XCQScenarioTestSuite.m */,
+				F045123D1BBF31960064CC43 /* XCQStepDefinition.h */,
+				F045123E1BBF31960064CC43 /* XCQStepDefinition.m */,
 				F08C200B1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.h */,
 				F08C200C1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.m */,
 				F08C20001A8FFE6200DD5F76 /* XCTestSuite+XCQFeatureTestSuite.h */,
@@ -224,8 +231,9 @@
 		F08C1FBA1A8FFBE900DD5F76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XCQ;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = BBC;
+				ORGANIZATIONNAME = initWithStyle;
 				TargetAttributes = {
 					F08C1FC11A8FFBE900DD5F76 = {
 						CreatedOnToolsVersion = 6.1;
@@ -236,7 +244,7 @@
 				};
 			};
 			buildConfigurationList = F08C1FBD1A8FFBE900DD5F76 /* Build configuration list for PBXProject "XCCuke" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -274,6 +282,7 @@
 				F08C1FF91A8FFC2100DD5F76 /* XCQScenario.m in Sources */,
 				F00EA3DE1A90B480005A7A39 /* XCQTestSuite.m in Sources */,
 				F08C20021A8FFE6200DD5F76 /* XCTestSuite+XCQFeatureTestSuite.m in Sources */,
+				F045123F1BBF31960064CC43 /* XCQStepDefinition.m in Sources */,
 				F08C1FF71A8FFC2100DD5F76 /* XCQFeatureParser.m in Sources */,
 				F08C200D1A900B1700DD5F76 /* XCTestCase+XCQStepTestCase.m in Sources */,
 				F08C1FFA1A8FFC2100DD5F76 /* XCQStep.m in Sources */,

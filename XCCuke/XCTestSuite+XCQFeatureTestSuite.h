@@ -9,15 +9,15 @@
 #import <XCTest/XCTest.h>
 
 @class XCQFeature;
-
-@protocol XCQScenarioTestSuiteDelegate;
+@protocol XCQScenarioTestSuiteObserver;
 
 @interface XCTestSuite (XCQFeatureTestSuite)
 
 + (instancetype)testSuiteWithFeaturesAtPaths:(NSArray *)filePaths
                                        title:(NSString *)title
-                                   directory:(NSString *)directory;
+                                   directory:(NSString *)directory
+                                    observer:(id<XCQScenarioTestSuiteObserver>)observer;
 
-+ (instancetype)testSuiteWithFeature:(XCQFeature *)feature;
++ (instancetype)testSuiteWithFeature:(XCQFeature *)feature observer:(id<XCQScenarioTestSuiteObserver>)observer;
 
 @end

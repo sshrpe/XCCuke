@@ -1,6 +1,6 @@
 //
 //  XCQTestSuite.m
-//  KIFCukeExample
+//  XCCuke
 //
 //  Created by Stuart Sharpe on 14/02/2015.
 //  Copyright (c) 2015 initWithStyle. All rights reserved.
@@ -19,7 +19,8 @@
     }
     return [XCTestSuite testSuiteWithFeaturesAtPaths:filePaths
                                                title:[self title]
-                                           directory:[self featureFileDirectory]];
+                                           directory:[self featureFileDirectory]
+                                            observer:[self testObserver]];
 }
 
 + (NSArray *)featureFiles;
@@ -37,14 +38,9 @@
     return nil;
 }
 
-- (void)testSuite:(XCTestSuite *)suite willBeginTestingScenario:(XCQScenario *)scenario
++ (id<XCQScenarioTestSuiteObserver>)testObserver
 {
-    
-}
-
-- (void)testSuite:(XCTestSuite *)suite didFinishTestingScenario:(XCQScenario *)scenario
-{
-    
+    return nil;
 }
 
 @end

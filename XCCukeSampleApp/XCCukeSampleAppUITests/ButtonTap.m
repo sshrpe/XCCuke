@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import <XCCuke/XCCuke.h>
 
-@interface ButtonTap : XCTestCase
+@interface ButtonTap : XCQStepDefinition
 
 @end
 

@@ -8,13 +8,22 @@
 
 import XCTest
 
-class Navigation: XCTestCase {
+class Navigation: XCQStepDefinition {
         
     func IAmOnTheRootView() {
-        
-        // This is essentially just here to prove that Swift works too.
-        XCUIApplication().launch()
-
     }
     
+    func IRotateMyDeviceAntiClockwise() {
+        XCUIDevice.sharedDevice().orientation = .LandscapeLeft
+    }
+    
+    func IRotateMyDeviceClockwise() {
+        XCUIDevice.sharedDevice().orientation = .LandscapeRight
+    }
+
+    func MyDeviceShouldBeInLandscapeOrientation() {
+        XCTAssertTrue(UIDeviceOrientationIsLandscape(XCUIDevice().orientation))
+
+    }
+
 }

@@ -1,5 +1,5 @@
 //
-//  XCQStepTestCase.h
+//  XCQStepDefinitionNotFoundCase.h
 //  XCCuke
 //
 //  Created by Stuart Sharpe on 14/02/2015.

@@ -7,8 +7,8 @@
 //
 
 @import XCTest;
-#import "XCQScenarioTestSuiteDelegate.h"
 @class XCQScenario;
+#import "XCQScenarioTestSuiteObserver.h"
 
 #define XCQ_FEATURE_FILE_DIRECTORY(dir) \
 + (NSString *)featureFileDirectory { \
@@ -31,7 +31,7 @@ return [[NSBundle bundleForClass:self] pathsForResourcesOfType:@"feature" inDire
  `XCQ_INCLUDE_ALL_FEATURES_IN_BUNDLE()` within the @implementation block to create a suite which
  will run all feature files in the bundle.
  */
-@interface XCQTestSuite : XCTestCase <XCQScenarioTestSuiteDelegate>
+@interface XCQTestSuite : XCTestCase
 
 /**
  Returns a list of file paths to the feature files which should be run in this test suite.
@@ -51,6 +51,17 @@ return [[NSBundle bundleForClass:self] pathsForResourcesOfType:@"feature" inDire
 
  */
 + (NSString *) title;
+
+
+/**
+ Implement to return an object conforming XCQScenarioTestSuiteObserver which will be called when
+ scenarios in this suite begin and end.
+ 
+ @return Default implementation returns nil.
+ 
+ */
++ (id<XCQScenarioTestSuiteObserver>)testObserver;
+
 
 @end
 

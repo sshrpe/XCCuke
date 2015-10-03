@@ -1,6 +1,6 @@
 //
-//  GRStep.h
-//  GherkinRunner
+//  XCQStep
+//  XCCuke
 //
 //  Created by Stuart Sharpe on 14/02/2015.
 //  Copyright (c) 2015 initWithStyle. All rights reserved.

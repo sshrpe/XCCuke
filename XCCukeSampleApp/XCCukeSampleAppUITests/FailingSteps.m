@@ -7,8 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <XCCuke/XCCuke.h>
 
-@interface FailingSteps : XCTestCase
+@interface FailingSteps : XCQStepDefinition
 
 @end
 

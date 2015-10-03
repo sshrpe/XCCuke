@@ -82,10 +82,10 @@
 {
 }
 
-- (void)TheFeatureFileHasMoreScenarios
-{
-    
-}
+//- (void)TheFeatureFileHasMoreScenarios
+//{
+//    
+//}
 
 - (void)TheStepsWillBeFilledWithBite {
     // Replace this your test code

@@ -35,10 +35,19 @@ If you would like Xcode to be able to highlight lines within feature files which
 you can use the XCQ_FEATURE_FILE_DIRECTORY() macro in the subclass, passing it the path (relative to the 
 current file) to the directory within your project which contains the feature files.
 
+### Pre- and Post-Scenario Hooks
+
+The XCQTestSuite can return an observer from the `+testObserver` method, which can then be used to provide 
+custom behaviour before and after scenarios. Observers must conform to the `XCQScenarioTestSuiteObserver`
+protocol, which includes callbacks for the scenario starting, the scenario finishing, and the UI test server
+becoming active (when using Xcode UI Test targets). See the documentation in the `XCQScenarioTestSuiteObserver` 
+header for more information on what each observation method can be used for.
+
 ### Defining Steps
 
-Step definitions can be created in any XCTestCase subclass (this allows using standard XCTest assertions), and 
-can be created using Objective-C or Swift. Step definitions have no parameters and return void.
+Step definitions must be implemented in a subclass of XCQStepDefinition (this is itself a subclass of XCTestCase 
+and therefore allows using standard XCTest assertions), and can be created using Objective-C or Swift. Step 
+definitions have no parameters and return void.
 
 To define a step, create a method whose name matches the text of the step definition. The method name should:
 
@@ -83,13 +92,12 @@ All of the following steps must be defined:
 ```
 
 If a step definition is not found, a test failure will be logged which includes the expected method signature 
-of the step, which can be found in the console or by going to Xcode's 'Report navigator', selecting the test
+of the step. This can be found in the console or by going to Xcode's 'Report navigator', selecting the test
 run, opening the 'Logs' pane and viewing the log for the failed step.
 
 ## Areas For Future Development
 
 - Add (or implement) an actual Gherkin Parser for loading scenarios from feature files.
-- Fix support for Pre- and Post-Scenario hooks using XCTestObserver
 - Scenario Tagging Support
 - - Filter scenarios out using a tag
 - - Automatically create test suites based on tags
@@ -101,5 +109,4 @@ run, opening the 'Logs' pane and viewing the log for the failed step.
 
 - Current 'parser' is not a true Gherkin parser and is severely limited in features.
 - Scenarios currently continue to run after a step has failed in Xcode 7.
-- Pre- and Post-Scenario hooks in XCQTestSuite subclasses do not currently get called by the test runner.
 - Steps which begin with numbers 

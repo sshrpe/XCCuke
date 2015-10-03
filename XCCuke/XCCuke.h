@@ -11,6 +11,7 @@
 #import <XCCuke/XCQFeature.h>
 #import <XCCuke/XCQScenario.h>
 #import <XCCuke/XCQStep.h>
+#import <XCCuke/XCQStepDefinition.h>
 #import <XCCuke/XCTestCase+XCQStepTestCase.h>
 #import <XCCuke/XCTestSuite+XCQFeatureTestSuite.h>
 
