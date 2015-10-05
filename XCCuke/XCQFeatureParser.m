@@ -26,6 +26,10 @@ static NSString *const kScenarioOutlinePrefix = @"Scenario Outline: ";
 @property (strong) NSString *currentOutlineTitle;
 @property (strong) NSMutableArray *currentOutlineSteps;
 @property (strong) NSArray *currentParameterTitles;
+
+@property (strong) NSSet<NSString *> *featureTags;
+@property (strong) NSSet<NSString *> *scenarioTags;
+
 @end
 
 @implementation XCQFeatureParser {
@@ -133,7 +137,28 @@ static NSString *const kScenarioOutlinePrefix = @"Scenario Outline: ";
         NSTextCheckingResult *match = [matches firstObject];
         [self addStep:[line substringFromIndex:match.range.location+match.range.length]];
     } else {
-//        NSLog(@"Line: %@", line);
+        // Scan for tags
+        NSRegularExpression *tagExpression = [[NSRegularExpression alloc] initWithPattern:@"@([a-zA-Z0-9]+)"
+                                                                                options:0
+                                                                                  error:nil];
+        NSArray *matches = [tagExpression matchesInString:line options:0 range:NSMakeRange(0, [line length])];
+        if ([matches count]) {
+            NSMutableSet<NSString *> *tags = [NSMutableSet set];
+            for (NSTextCheckingResult *result in matches) {
+                NSString *tag = [line substringWithRange:[result rangeAtIndex:1]];
+                [tags addObject:tag];
+            }
+            
+            if (!self.currentFeature) {
+                self.featureTags = [NSSet setWithSet:tags];
+            } else {
+                self.scenarioTags = [NSSet setWithSet:tags];
+            }
+        } else {
+            // Unknown line
+            NSLog(@"Line: %@", line);
+        }
+
     }
 }
 
@@ -157,6 +182,7 @@ static NSString *const kScenarioOutlinePrefix = @"Scenario Outline: ";
     self.currentScenario = [[XCQScenario alloc] init];
     self.currentScenario.title = title;
     [self.currentFeature addScenario:self.currentScenario];
+    self.currentScenario.tags = [self.featureTags setByAddingObjectsFromSet:self.scenarioTags];
 }
 
 - (void)beginScenarioOutlineWithTitle:(NSString *)title
@@ -204,7 +230,9 @@ static NSString *const kScenarioOutlinePrefix = @"Scenario Outline: ";
         NSString *key = [NSString stringWithFormat:@"<%@>", self.currentParameterTitles[i]];
         output = [output stringByReplacingOccurrencesOfString:key withString:parameters[i]];
     }
-    return [XCQStep stepWithText:output filePath:[self.directory stringByAppendingPathComponent:[self.currentFeature fileName]] lineNumber:step.lineNumber];
+    return [XCQStep stepWithText:output
+                        filePath:[self.directory stringByAppendingPathComponent:[self.currentFeature fileName]]
+                      lineNumber:step.lineNumber];
 }
 
 - (void)addStep:(NSString *)text

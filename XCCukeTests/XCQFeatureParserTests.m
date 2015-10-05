@@ -161,8 +161,6 @@
     
     firstScenario = [[feature scenarios] firstObject];
     XCTAssertEqualObjects([firstScenario.steps[0] filePath], @"/Directory/Path/Second.feature");
-
-
 }
 
 - (void)testStepsWithSpecialCharactersAreGivenCorrectSelectors
@@ -185,5 +183,33 @@
     XCTAssertEqualObjects(@"ItIsntCapitalisedStrangely", NSStringFromSelector([[lastScenario.steps lastObject] selector]));
 }
 
+- (void)testScenariosFromFeaturesWithTagsIncludeFeatureTags
+{
+    NSString *featureFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Third" ofType:@"feature"];
+    XCQFeature *feature = [XCQFeatureParser featureWithFeatureFilePath:featureFilePath];
+    XCQScenario *firstScenario = feature.scenarios[0];
+    NSSet *expectedTags = [NSSet setWithObjects:@"tag1", @"tag2", @"tag3", nil];
+    XCTAssertEqualObjects(expectedTags, [firstScenario tags]);
+}
+
+- (void)testScenariosWithTagsIncludeScenarioTags
+{
+    NSString *featureFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Third" ofType:@"feature"];
+    XCQFeature *feature = [XCQFeatureParser featureWithFeatureFilePath:featureFilePath];
+    XCQScenario *scenario = feature.scenarios[1];
+    XCTAssertTrue([scenario.tags containsObject:@"tag4"]);
+
+}
+
+- (void)testScenarioAndFeatureTagsAreCumulative
+{
+    NSString *featureFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Third" ofType:@"feature"];
+    XCQFeature *feature = [XCQFeatureParser featureWithFeatureFilePath:featureFilePath];
+    XCQScenario *scenario = feature.scenarios[2];
+    NSSet *expectedTags = [NSSet setWithObjects:@"tag1", @"tag2", @"tag3", @"tag5", @"tag6", nil];
+
+    XCTAssertEqualObjects(expectedTags, [scenario tags]);
+
+}
 
 @end

@@ -18,4 +18,6 @@
 
 @property (strong) NSArray *steps;
 
+@property (strong) NSSet<NSString *>*tags;
+
 @end

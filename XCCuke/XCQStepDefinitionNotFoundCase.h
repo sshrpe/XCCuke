@@ -7,10 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "XCQStepDefinition.h"
 
 @class XCQStep;
 
-@interface XCQStepDefinitionNotFoundCase : XCTestCase
+@interface XCQStepDefinitionNotFoundCase : XCQStepDefinition
 
 - (instancetype)initWithStep:(XCQStep *)step;
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F00EA3DE1A90B480005A7A39 /* XCQTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = F00EA3DD1A90B480005A7A39 /* XCQTestSuite.m */; };
 		F00EA3E01A90B625005A7A39 /* XCQTestSuite.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F00EA3DF1A90B4A2005A7A39 /* XCQTestSuite.h */; };
+		F03989701BC2EA8C00D49082 /* Third.feature in Resources */ = {isa = PBXBuildFile; fileRef = F039896F1BC2EA8C00D49082 /* Third.feature */; settings = {ASSET_TAGS = (); }; };
 		F045123F1BBF31960064CC43 /* XCQStepDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = F045123E1BBF31960064CC43 /* XCQStepDefinition.m */; settings = {ASSET_TAGS = (); }; };
 		F04512401BBF32710064CC43 /* XCQStepDefinition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F045123D1BBF31960064CC43 /* XCQStepDefinition.h */; };
 		F04A449E1A90DFA700A2A36F /* XCQScenarioTestSuiteObserver.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteObserver.h */; };
@@ -70,6 +71,7 @@
 /* Begin PBXFileReference section */
 		F00EA3DD1A90B480005A7A39 /* XCQTestSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQTestSuite.m; sourceTree = "<group>"; };
 		F00EA3DF1A90B4A2005A7A39 /* XCQTestSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQTestSuite.h; sourceTree = "<group>"; };
+		F039896F1BC2EA8C00D49082 /* Third.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Third.feature; sourceTree = "<group>"; };
 		F045123D1BBF31960064CC43 /* XCQStepDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQStepDefinition.h; sourceTree = "<group>"; };
 		F045123E1BBF31960064CC43 /* XCQStepDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCQStepDefinition.m; sourceTree = "<group>"; };
 		F04A449D1A90DF3400A2A36F /* XCQScenarioTestSuiteObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCQScenarioTestSuiteObserver.h; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				F08C1FFC1A8FFD1A00DD5F76 /* Feature.feature */,
 				F08C1FFD1A8FFD1A00DD5F76 /* Second.feature */,
+				F039896F1BC2EA8C00D49082 /* Third.feature */,
 				F08C1FEB1A8FFC1100DD5F76 /* XCQFeatureParserTests.m */,
 				F08C20091A90047200DD5F76 /* TestRunner.m */,
 				F0B371D11A90F12000A0CB20 /* ExampleSuite.m */,
@@ -268,6 +271,7 @@
 			files = (
 				F08C1FFF1A8FFD1A00DD5F76 /* Second.feature in Resources */,
 				F08C1FFE1A8FFD1A00DD5F76 /* Feature.feature in Resources */,
+				F03989701BC2EA8C00D49082 /* Third.feature in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
