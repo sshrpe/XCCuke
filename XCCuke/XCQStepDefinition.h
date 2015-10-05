@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "XCQStep.h"
 
 @protocol XCQStepTestCaseDelegate <NSObject>
 
@@ -15,6 +16,8 @@
 @end
 
 @interface XCQStepDefinition : XCTestCase
+
++ (XCTest *)testCaseWithStep:(XCQStep *)step;
 
 @property (weak) id<XCQStepTestCaseDelegate> delegate;
 

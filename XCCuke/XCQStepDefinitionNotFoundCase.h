@@ -8,12 +8,13 @@
 
 #import <XCTest/XCTest.h>
 #import "XCQStepDefinition.h"
+#import "XCQSelectorBuilder.h"
 
 @class XCQStep;
 
 @interface XCQStepDefinitionNotFoundCase : XCQStepDefinition
 
-- (instancetype)initWithStep:(XCQStep *)step;
+- (instancetype)initWithStep:(XCQStep *)step selectorBuilder:(id<XCQSelectorBuilder>)builder;
 
 @property (readonly) XCQStep *step;
 

@@ -8,6 +8,7 @@
 
 #import "XCQTestSuite.h"
 #import "XCTestSuite+XCQFeatureTestSuite.h"
+#import "XCQDefaultSelectorBuilder.h"
 
 @implementation XCQTestSuite
 
@@ -41,6 +42,11 @@
 + (id<XCQScenarioTestSuiteObserver>)testObserver
 {
     return nil;
+}
+
++ (id<XCQSelectorBuilder>)testSelectorBuilder
+{
+    return [[XCQDefaultSelectorBuilder alloc] init];
 }
 
 @end

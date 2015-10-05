@@ -13,16 +13,18 @@
 @interface XCQStepDefinitionNotFoundCase ()
 
 @property (strong) XCQStep *step;
+@property (strong) id<XCQSelectorBuilder> selectorBuilder;
 
 @end
 
 @implementation XCQStepDefinitionNotFoundCase
 
-- (instancetype)initWithStep:(XCQStep *)step
+- (instancetype)initWithStep:(XCQStep *)step selectorBuilder:(id<XCQSelectorBuilder>)builder;
 {
     self = [super initWithSelector:@selector(stepNotFound)];
     if (self) {
         self.step = step;
+        self.selectorBuilder = builder;
     }
     return self;
 }
@@ -45,7 +47,7 @@
 {
     [run start];
     NSString *errorDescription = [NSString stringWithFormat:@"Cannot find step definition for '%@'", [self.step text]];
-    NSString *selector = NSStringFromSelector([self.step selector]);
+    NSString *selector = NSStringFromSelector([self.selectorBuilder selectorForStep:self.step]);
     NSLog(@"WARNING: %@ Step definition not found. \n\nTo fix this error, add the following step definition:\n\n\
 // Objective-C:\n- (void)%@ {\n\t// Replace this with your test code\n\tNSLog(@\"Step Definition Pending\");\n}\n\n\
 // Swift:\nfunc %@() {\n\t// Replace this with your test code.\n\tprint(\"Step Definition Pending\")\n}\n\n", errorDescription, selector, selector);

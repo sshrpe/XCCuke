@@ -8,6 +8,7 @@
 
 @import XCTest;
 @class XCQScenario;
+#import "XCQSelectorBuilder.h"
 #import "XCQScenarioTestSuiteObserver.h"
 
 #define XCQ_FEATURE_FILE_DIRECTORY(dir) \
@@ -61,6 +62,16 @@ return [[NSBundle bundleForClass:self] pathsForResourcesOfType:@"feature" inDire
  
  */
 + (id<XCQScenarioTestSuiteObserver>)testObserver;
+
+/**
+ The default selector builder creates selectors which are title-cased with all spaces removed and
+ all non-alphanumeric characters stripped, and accept no parameters.
+ 
+ If you would prefer different a different format for selectors, create an implementation of
+ XCQSelectorBuilder and return it from this method in your test suites. The selector builder
+ should return a selector which accepts no arguments.
+ */
++ (id<XCQSelectorBuilder>)testSelectorBuilder;
 
 
 @end

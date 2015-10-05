@@ -10,7 +10,6 @@
 #import "XCQFeature.h"
 #import "XCQScenario.h"
 #import "XCQStep.h"
-#import "XCTestCase+XCQStepTestCase.h"
 #import "XCQScenarioTestSuiteObserver.h"
 #import "XCQStepDefinition.h"
 #import <XCTest/XCTest.h>

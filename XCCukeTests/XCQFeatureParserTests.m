@@ -163,26 +163,6 @@
     XCTAssertEqualObjects([firstScenario.steps[0] filePath], @"/Directory/Path/Second.feature");
 }
 
-- (void)testStepsWithSpecialCharactersAreGivenCorrectSelectors
-{
-    NSString *featureFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Feature" ofType:@"feature"];
-    XCQFeature *feature = [XCQFeatureParser featureWithFeatureFilePath:featureFilePath];
-    
-    XCQScenario *lastScenario = feature.scenarios[5];
-    XCTAssertEqualObjects(@"the action_type is menu-tap", [lastScenario.steps[0] text]);
-    XCTAssertEqualObjects(@"TheActionTypeIsMenuTap", NSStringFromSelector([lastScenario.steps[0] selector]));
-}
-
-- (void)testStepsWithSpecialCharactersAreGivenCorrectCapitalisation
-{
-    NSString *featureFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Second" ofType:@"feature"];
-    XCQFeature *feature = [XCQFeatureParser featureWithFeatureFilePath:featureFilePath];
-    
-    XCQScenario *lastScenario = feature.scenarios[2];
-    XCTAssertEqualObjects(@"it isn't capitalised strangely", [[lastScenario.steps lastObject] text]);
-    XCTAssertEqualObjects(@"ItIsntCapitalisedStrangely", NSStringFromSelector([[lastScenario.steps lastObject] selector]));
-}
-
 - (void)testScenariosFromFeaturesWithTagsIncludeFeatureTags
 {
     NSString *featureFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Third" ofType:@"feature"];

@@ -18,6 +18,4 @@
 @property (readonly, copy) NSString *text;
 @property (readonly, assign) NSUInteger lineNumber;
 
-- (SEL)selector;
-
 @end

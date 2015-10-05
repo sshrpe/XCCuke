@@ -7,6 +7,9 @@
 //
 
 #import "XCQStepDefinition.h"
+#import "XCQStepDefinitionNotFoundCase.h"
+#import "XCQDefaultSelectorBuilder.h"
+#import "XCQStepDefinitionFinder.h"
 
 @interface XCTestCase ()
 
@@ -22,5 +25,17 @@
         [self.delegate uiTestingServerActive];
     }
 }
+
++ (XCTest *)testCaseWithStep:(XCQStep *)step;
+{
+    XCQDefaultSelectorBuilder *selectorBuilder = [[XCQDefaultSelectorBuilder alloc] init];
+    SEL selector = [selectorBuilder selectorForStep:step];
+    Class testClass = [XCQStepDefinitionFinder testClassForSelector:selector];
+    if (testClass) {
+        return [testClass testCaseWithSelector:selector];
+    }
+    return [[XCQStepDefinitionNotFoundCase alloc] initWithStep:step selectorBuilder:selectorBuilder];
+}
+
 
 @end

@@ -27,13 +27,4 @@
     return step;
 }
 
-
-- (SEL)selector
-{
-    NSArray *components = [[[self text] capitalizedString] componentsSeparatedByCharactersInSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]];
-    NSString *selectorString = [components componentsJoinedByString:@" "];
-    selectorString = [selectorString stringByReplacingOccurrencesOfString:@" " withString:@""];
-    return NSSelectorFromString(selectorString);
-}
-
 @end

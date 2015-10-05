@@ -1,26 +1,16 @@
 //
-//  XCTestCase+XCQStepTestCase.m
+//  XCQStepDefinitionFinder.m
 //  XCCuke
 //
-//  Created by Stuart Sharpe on 14/02/2015.
-//  Copyright (c) 2015 initWithStyle. All rights reserved.
+//  Created by Stuart Sharpe on 05/10/2015.
+//  Copyright © 2015 initWithStyle. All rights reserved.
 //
 
-#import "XCTestCase+XCQStepTestCase.h"
-#import "XCQStep.h"
-#import "XCQStepDefinitionNotFoundCase.h"
+#import "XCQStepDefinitionFinder.h"
 #import <objc/runtime.h>
+#import "XCQStepDefinition.h"
 
-@implementation XCTestCase (XCQStepTestCase)
-
-+ (XCTest *)testCaseWithStep:(XCQStep *)step;
-{
-    Class testClass = [self testClassForSelector:step.selector];
-    if (testClass) {
-        return [testClass testCaseWithSelector:step.selector];
-    }
-    return [[XCQStepDefinitionNotFoundCase alloc] initWithStep:step];
-}
+@implementation XCQStepDefinitionFinder
 
 + (Class)testClassForSelector:(SEL)selector
 {
@@ -37,7 +27,7 @@
         do
         {
             superClass = class_getSuperclass(superClass);
-        } while(superClass && superClass != [XCTestCase class]);
+        } while(superClass && superClass != [XCQStepDefinition class]);
         
         if (superClass == nil)
         {
