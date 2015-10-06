@@ -14,6 +14,10 @@
 
 + (instancetype)stepWithText:(NSString *)text filePath:(NSString *)filePath lineNumber:(NSUInteger)lineNumber;
 
+- (instancetype)initWithText:(NSString *)text
+                    filePath:(NSString *)filePath
+                  lineNumber:(NSUInteger)lineNumber;
+
 @property (readonly, copy) NSString *filePath;
 @property (readonly, copy) NSString *text;
 @property (readonly, assign) NSUInteger lineNumber;

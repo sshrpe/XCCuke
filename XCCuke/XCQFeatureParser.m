@@ -45,6 +45,7 @@ static NSString *const kScenarioOutlinePrefix = @"Scenario Outline: ";
 + (XCQFeature *)featureWithFeatureFilePath:(NSString *)featureFilePath directory:(NSString *)directory;
 {
     XCQFeatureParser *parser = [[XCQFeatureParser alloc] initWithFilePath:featureFilePath directory:directory];
+    
     XCQFeature *feature = [parser parse];
     return feature;
 }
@@ -66,6 +67,7 @@ static NSString *const kScenarioOutlinePrefix = @"Scenario Outline: ";
     NSString *fileString = [NSString stringWithContentsOfFile:self.filePath
                                                      encoding:NSUTF8StringEncoding error:nil];
     
+
     NSScanner *scanner = [[NSScanner alloc] initWithString:fileString];
     while (![scanner isAtEnd]) {
         _lineNumber++;
@@ -156,7 +158,7 @@ static NSString *const kScenarioOutlinePrefix = @"Scenario Outline: ";
             }
         } else {
             // Unknown line
-            NSLog(@"Line: %@", line);
+            NSLog(@"Ignoring Line in Feature File: %@", line);
         }
 
     }
@@ -228,7 +230,9 @@ static NSString *const kScenarioOutlinePrefix = @"Scenario Outline: ";
     NSString *output = [step text];
     for (NSInteger i=0; i < self.currentParameterTitles.count; i++) {
         NSString *key = [NSString stringWithFormat:@"<%@>", self.currentParameterTitles[i]];
-        output = [output stringByReplacingOccurrencesOfString:key withString:parameters[i]];
+        output = [output stringByReplacingOccurrencesOfString:key withString:parameters[i]
+                                                      options:NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch
+                                                        range:NSMakeRange(0, output.length)];
     }
     return [XCQStep stepWithText:output
                         filePath:[self.directory stringByAppendingPathComponent:[self.currentFeature fileName]]

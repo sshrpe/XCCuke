@@ -11,18 +11,20 @@ Scenario: Scenarios are parsed
     And the feature file has scenarios
     When I run the tests
     Then the scenarios will be run
-
 Scenario: Comments are excluded
     And the feature file contains comments #like this one
     When the feature file #is parsed
 # Without this line included
     Then the comments will be ignored
 
+
 Scenario Outline: Scenario outlines are parsed
     And the feature has a scenario outline
     When the outline has <I say>
-    Then the steps will be filled with <You say>
-    | I say     | You say    |
+    Then the steps will be filled with <you say>
+
+Examples:
+    || I say     || You say    ||
     | black     | white     |
     | bark      | bite      |
     | shark     | hey man   |

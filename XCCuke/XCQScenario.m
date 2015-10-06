@@ -27,7 +27,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"Scenario: %@", _title];
+    return [NSString stringWithFormat:@"XCQScenario: %@", _title];
 }
 
 @end

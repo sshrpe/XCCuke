@@ -20,11 +20,24 @@
 @implementation XCQStep
 
 + (instancetype)stepWithText:(NSString *)text filePath:(NSString *)filePath lineNumber:(NSUInteger)lineNumber {
-    XCQStep *step = [[XCQStep alloc] init];
-    step.text = text;
-    step.filePath = filePath;
-    step.lineNumber = lineNumber;
+    XCQStep *step = [[XCQStep alloc] initWithText:text filePath:filePath lineNumber:lineNumber];
     return step;
+}
+
+- (instancetype)initWithText:(NSString *)text filePath:(NSString *)filePath lineNumber:(NSUInteger)lineNumber
+{
+    self = [super init];
+    if (self) {
+        self.text = text;
+        self.filePath = filePath;
+        self.lineNumber = lineNumber;
+    }
+    return self;
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"XCQStep: %@ (%@:%@)", self.text, self.filePath, @(self.lineNumber)];
 }
 
 @end
