@@ -18,7 +18,6 @@
 		F0013B691BBDAE05004787A1 /* AllFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = F0013B651BBDAE05004787A1 /* AllFeatures.m */; };
 		F0013B6A1BBDAE05004787A1 /* ButtonTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F0013B661BBDAE05004787A1 /* ButtonTap.m */; };
 		F0013B6B1BBDAE05004787A1 /* ButtonTap.feature in Resources */ = {isa = PBXBuildFile; fileRef = F0013B681BBDAE05004787A1 /* ButtonTap.feature */; };
-		F045123B1BBF2DF30064CC43 /* SmallSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = F045123A1BBF2DF30064CC43 /* SmallSuite.m */; settings = {ASSET_TAGS = (); }; };
 		F04512431BBFE32A0064CC43 /* LaunchAppObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F04512421BBFE32A0064CC43 /* LaunchAppObserver.m */; settings = {ASSET_TAGS = (); }; };
 		F0AF996D1BBF220F00F6406D /* DeviceActions.feature in Resources */ = {isa = PBXBuildFile; fileRef = F0AF996C1BBF220F00F6406D /* DeviceActions.feature */; };
 		F0BABA3E1BBDD54A001977A3 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BABA3D1BBDD54A001977A3 /* Navigation.swift */; };
@@ -85,7 +84,6 @@
 		F0013B651BBDAE05004787A1 /* AllFeatures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllFeatures.m; sourceTree = "<group>"; };
 		F0013B661BBDAE05004787A1 /* ButtonTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonTap.m; sourceTree = "<group>"; };
 		F0013B681BBDAE05004787A1 /* ButtonTap.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ButtonTap.feature; sourceTree = "<group>"; };
-		F045123A1BBF2DF30064CC43 /* SmallSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallSuite.m; sourceTree = "<group>"; };
 		F04512411BBFE32A0064CC43 /* LaunchAppObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAppObserver.h; sourceTree = "<group>"; };
 		F04512421BBFE32A0064CC43 /* LaunchAppObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAppObserver.m; sourceTree = "<group>"; };
 		F0AF996C1BBF220F00F6406D /* DeviceActions.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DeviceActions.feature; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				F0013B651BBDAE05004787A1 /* AllFeatures.m */,
-				F045123A1BBF2DF30064CC43 /* SmallSuite.m */,
 				F0013B661BBDAE05004787A1 /* ButtonTap.m */,
 				F0BABA3D1BBDD54A001977A3 /* Navigation.swift */,
 				F0C1AAD31BBDC5A1004C5B1E /* FailingSteps.m */,
@@ -394,7 +391,6 @@
 				F0013B6A1BBDAE05004787A1 /* ButtonTap.m in Sources */,
 				F0BABA3E1BBDD54A001977A3 /* Navigation.swift in Sources */,
 				F0C1AAD41BBDC5A1004C5B1E /* FailingSteps.m in Sources */,
-				F045123B1BBF2DF30064CC43 /* SmallSuite.m in Sources */,
 				F0013B431BBDAABE004787A1 /* XCSampleAppUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

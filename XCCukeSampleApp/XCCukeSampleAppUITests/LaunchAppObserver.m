@@ -18,6 +18,7 @@
 - (void)testSuite:(XCQScenarioTestSuite *)suite didFinishTestingScenario:(XCQScenario *)scenario
 {
     NSLog(@"Post-scenario callback: %@", scenario);
+    sleep(1);
 }
 
 - (void) testSuite:(XCQScenarioTestSuite *)suite uiTestingServerBeganForScenario:(XCQScenario *)scenario;

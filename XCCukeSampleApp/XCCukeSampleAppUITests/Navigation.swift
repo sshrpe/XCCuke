@@ -11,6 +11,7 @@ import XCTest
 class Navigation: XCQStepDefinition {
         
     func IAmOnTheRootView() {
+        XCUIDevice.sharedDevice().orientation = .Portrait
     }
     
     func IRotateMyDeviceAntiClockwise() {
